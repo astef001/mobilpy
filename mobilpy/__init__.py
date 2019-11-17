@@ -158,8 +158,8 @@ class Client(object):
 
         key = RSA.importKey(self.private_key)
 
-        env_key = urllib.parse.unquote(env_key).decode('utf8')
-        data = urllib.parse.unquote(data).decode('utf8')
+        env_key = urllib.parse.unquote(env_key)
+        data = urllib.parse.unquote(data)
 
         try:
             env_key = base64.b64decode(env_key)
